@@ -1,0 +1,43 @@
+<html><head><title>JavaScript</title>
+<style></style>
+</head>
+<body>
+<span class="gameMessage">Press here to Start Game</span>
+<div class="score"></div>
+<div class="game">
+    <div class="gameArea"></div>
+</div>
+    <script>
+    const score = document.querySelector(".score");
+    const gameArea = document.querySelector(".gameArea");
+    const gameMessage = document.querySelector(".gameMessage");
+    document.addEventListener("keydown",pressOn);
+    document.addEventListener("keyup",pressOff);
+    let keys = {
+        space:false
+    }
+    
+    
+    function pressOn(e){
+        e.preventDefault();
+        let tempKey = (e.key == " ") ? "space" : e.key;
+        keys[tempKey] = true;
+        console.log(keys);
+    }
+    
+    function pressOff(e){
+        e.preventDefault();
+        let tempKey = (e.key == " ") ? "space" : e.key;
+        keys[tempKey] = false;
+        console.log(keys);
+    }
+    
+    
+    
+        
+        
+    
+    
+    
+    </script>
+</body></html>
